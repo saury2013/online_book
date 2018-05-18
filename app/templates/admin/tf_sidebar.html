@@ -1,0 +1,29 @@
+<div class="admin-sidebar am-offcanvas" id="admin-offcanvas">
+    <div class="am-offcanvas-bar admin-offcanvas-bar">
+        <ul class="am-list admin-sidebar-list">
+            <li><a href="{{ url_for("web.index") }}"><span class="am-icon-home"></span> 首页</a></li>
+            <li {% if request.endpoint=="admin.index" %}class="active"{% endif %}><a
+                    href="{{ url_for("admin.index") }}"><span class="am-icon-table"></span>书籍</a></li>
+            <li {% if request.endpoint=="admin.user" %}class="active"{% endif %}><a
+                    href="{{ url_for("admin.user") }}"><span class="am-icon-pencil-square-o"></span> 用户</a></li>
+            <li {% if request.endpoint=="admin.site" %}class="active"{% endif %}><a
+                    href="{{ url_for("admin.site") }}"><span class="am-icon-sign-out"></span> 设置</a></li>
+        </ul>
+
+        <div class="am-panel am-panel-default admin-sidebar-panel">
+            <div class="am-panel-bd">
+                <p><span class="am-icon-bookmark"></span> 随记</p>
+                <p>即念即觉，一生一重。有情有心尘垢净，唯时唯念诸法明。—— 三余无梦生</p>
+            </div>
+        </div>
+
+        <div class="am-panel am-panel-default admin-sidebar-panel">
+            <div class="am-panel-bd">
+                <p><span class="am-icon-tag"></span> wiki</p>
+                <p>Welcome to the Amaze UI wiki!</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+

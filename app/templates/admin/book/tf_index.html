@@ -1,0 +1,76 @@
+{% extends 'admin/tf_base.html' %}
+{% import "_pagination.html" as page_macros %}
+{% block title %}
+    <title>书籍 - {{ site["name"]|upper }}</title>
+{% endblock title %}
+
+{% block content %}
+    <div class="am-cf admin-main">
+        <!-- sidebar start -->
+        {% include "admin/tf_sidebar.html" %}
+        <!-- sidebar end -->
+
+        <!-- content start -->
+        <div class="admin-content">
+            <div class="admin-content-body">
+
+                <div class="am-g">
+
+
+                    <div class="am-u-sm-12 am-u-md-3 pull-right" style="margin-top: 20px">
+                        <div class="am-input-group am-input-group-sm">
+                            <input type="text" class="am-form-field">
+                            <span class="am-input-group-btn">
+            <button class="am-btn am-btn-default" type="button">搜索</button>
+          </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-body book-panel">
+                    <div class="tab-group clearfix">
+                        <a class="tab-item {% if tab != "draft" %}active{% endif %}"
+                           href="{{ url_for("admin.index") }}">我的书籍</a>
+                        <a class="tab-item {% if tab=="draft" %}active{% endif %}"
+                           href="{{ url_for("admin.index", tab="draft") }}">草稿{% if count_draft %}
+                            <span class="count">{{ count_draft }}</span>{% endif %}</a>
+                    </div>
+                    {% if books.items %}
+                        <ul id="book-group" class="book-group">
+                            {% with type="admin" %}
+                                {% include "includes/_book.html" %}
+                            {% endwith %}
+
+                        </ul>
+
+                        {{ page_macros.pagination_widget(books, "admin.index") }}
+                    {% else %}
+                        {% if tab=="draft" %}
+                            <div class="no-content">
+                                <p class="msg">没有内容</p>
+                            </div>
+                        {% else %}
+                            <div class="no-content">
+                                <p class="msg">您还没有任何书籍，请先创建书籍</p>
+                                <p>
+                                    <a class="btn btn-book" href="{{ url_for("admin.book_new") }}">开始写书</a>
+                                </p>
+                            </div>
+                        {% endif %}
+                    {% endif %}
+                </div>
+
+            </div>
+
+
+        </div>
+        <!-- content end -->
+    </div>
+
+    <a href="#" class="am-icon-btn am-icon-th-list am-show-sm-only admin-menu"
+       data-am-offcanvas="{target: '#admin-offcanvas'}">test</a>
+{% endblock content %}
+
+
+
+
+

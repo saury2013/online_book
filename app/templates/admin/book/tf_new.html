@@ -1,0 +1,99 @@
+{% extends "admin/tf_base.html" %}
+{% block title %}
+    <title>创建书籍 - {{ site["name"]|upper }}</title>
+{% endblock title %}
+
+
+
+{% block content %}
+    <div class="am-cf admin-main">
+        {% include "admin/tf_sidebar.html" %}
+
+
+        <!-- content start -->
+        <div class="admin-content">
+            <div class="admin-content-body">
+                <div class="am-cf am-padding am-padding-bottom-0">
+                    <div class="am-fl am-cf"><a href="{{ url_for("admin.index") }}"><strong
+                            class="am-text-primary am-text-lg">书籍</strong></a> /
+                        <small>Personal information</small>
+                    </div>
+                </div>
+
+                <hr/>
+                <div class="am-g">
+
+                    <div class="am-u-sm-12 am-u-md-8 ">
+                        <form class="am-form am-form-horizontal" id="new-book" action="{{ url_for("admin.book_new") }}"
+                              method="post">
+                            {{ form.hidden_tag() }}
+                            <div class="am-form-group">
+                                <label for="book-name" class="am-u-sm-3 am-form-label ">书名</label>
+                                <div class="am-u-sm-9">
+                                    <input type="text" id="book-name" name="name"
+                                           {% if form.name.data %}value="{{ form.name.data }}"{% endif %}
+                                           autocomplete="off"
+                                           class="form-control {% if form.name.errors %}input-error{% endif %}"
+                                           placeholder="输入你的新书名">
+                                </div>
+                            </div>
+
+                            <div class="am-form-group">
+                                <label for="book-brief" class="am-u-sm-3 am-form-label">简介<span
+                                        class="gray-white">(可填)</span></label>
+                                <div class="am-u-sm-9">
+                                    <textarea class="" id="book-brief" name="brief" cols="30" rows="5"
+                                              placeholder="输入这本书的简介">{% if form.brief.data %}
+                                        {{ form.brief.data }}{% endif %}</textarea>
+                                    <small>大概描述下这本新书吧...</small>
+                                </div>
+                            </div>
+                            <div class="am-form-group">
+                                <div class="am-u-sm-5 am-u-sm-offset-3">
+                                    <label class="book-access">
+                                        <input class="access-radio" type="radio"
+                                               value="{{ form.access.choices[0][0] }}" name="access"
+                                               {% if form.access.data=="None" or form.access.data==form.access.choices[0][0] %}checked="checked"{% endif %}>
+                                        <i class="fa fa-columns access-icon"></i>
+                                        {{ form.access.choices[0][1] }} <span class="gray-white">(任何人都能看到)</span>
+                                    </label>
+                                </div>
+                                <div class="am-u-sm-4">
+                                    <label class="book-access">
+                                        <input class="access-radio" type="radio"
+                                               value="{{ form.access.choices[1][0] }}" name="access"
+                                               {% if form.access.data==form.access.choices[1][0] %}checked="checked"{% endif %}>
+                                        <i class="fa fa-lock access-icon warn"></i>
+                                        {{ form.access.choices[1][1] }} <span class="gray-white">(仅自己能看到)</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="am-form-group">
+                                <div class="am-u-sm-9 am-u-sm-push-3">
+                                    <button type="button" class="am-btn am-btn-primary">开始创建</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- content end -->
+
+    </div>
+    <a href="#" class="am-icon-btn am-icon-th-list am-show-sm-only admin-menu"
+       data-am-offcanvas="{target: '#admin-offcanvas'}"></a>
+{% endblock content %}
+
+{% block scripts %}
+    {% if config.get("DEBUG") %}
+        {% include "_common-js.html" %}
+        <script src="{{ url_for("static", filename="asserts/cropit/dist/jquery.cropit.js") }}"></script>
+    {% else %}
+        <script src="{{ url_for("static", filename="dist/js/common.min.js") }}"></script>
+    {% endif %}
+
+{% endblock scripts %}
+
+

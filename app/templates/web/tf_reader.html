@@ -1,0 +1,144 @@
+{% extends 'web/tf_base.html' %}
+{% block styles %}
+    <link rel="stylesheet" href="{{ url_for("static", filename="assets/css/admin.css") }}"/>
+    <link rel="stylesheet" href="{{ url_for("static", filename="css/web/reader.css") }}">
+    <script type="text/javascript">
+        var width = document.documentElement.clientWidth;
+        if (width >= 810) {
+            document.documentElement.className = "catalog-menu-open";
+        }
+    </script>
+{% endblock styles %}
+
+{% block navbar %}
+    <header class="am-topbar am-topbar-inverse admin-header">
+        <div class="am-topbar-brand">
+            <strong>ThreeFish</strong>
+            <small>三余读书面板</small>
+        </div>
+
+        <button class="am-topbar-btn am-topbar-toggle am-btn am-btn-sm am-btn-success am-show-sm-only"
+                data-am-collapse="{target: '#topbar-collapse'}"><span class="am-sr-only">导航切换</span> <span
+                class="am-icon-bars"></span></button>
+
+        <div class="am-collapse am-topbar-collapse" id="topbar-collapse">
+
+            <ul class="am-nav am-nav-pills am-topbar-nav am-topbar-right admin-header-list">
+                <li><a href="javascript:;"><span class="am-icon-envelope-o"></span> 收件箱 <span
+                        class="am-badge am-badge-warning">5</span></a></li>
+                <li class="am-dropdown" data-am-dropdown>
+                    <a class="am-dropdown-toggle" data-am-dropdown-toggle href="javascript:;">
+                        <img class="avatar" src="{{ url_for("static", filename=current_user._20px_avatar()) }}" alt="">
+                    </a>
+                    <ul class="am-dropdown-content">
+                        <li><a href="{{ url_for("admin.user_detail", id=current_user.id) }}"><span
+                                class="am-icon-user"></span> 资料</a></li>
+                        <li><a href="{{ url_for("admin.logout") }}"><span class="am-icon-power-off"></span> 退出</a></li>
+                    </ul>
+                </li>
+                {% if current_user.is_authenticated and current_user.id==book.user_id %}
+                    <li class="am-hide-sm-only"><a href="{{ url_for("admin.book_edit", id=book.id) }}"><span
+                            class="am-icon-wrench"></span> <span class="admin-write">编辑本书</span></a></li>
+                {% endif %}
+
+                <li class="am-hide-sm-only"><a href="javascript:;" id="admin-fullscreen"><span
+                        class="am-icon-arrows-alt"></span> <span class="admin-fullText">开启全屏</span></a></li>
+            </ul>
+        </div>
+    </header>
+{% endblock navbar %}
+{% block content %}
+
+
+    <div class="am-cf admin-main">
+        <!-- sidebar start -->
+        <div class="admin-sidebar am-offcanvas" id="admin-offcanvas">
+            <div class="am-offcanvas-bar admin-offcanvas-bar">
+
+
+                <div class="book-catalog absolute-catalog">
+                    <div class="catalog-wraper">
+                        <header class="catalog-head">
+
+
+                            <div class="am-img-thumbnail am-radius " style="margin-left: 20%" >
+                                <a  href="{{ url_for("web.index") }}" >
+                                    <img  src="{{ url_for("static", filename="img/logo.png") }}" >
+                                </a>
+                                <div class="name">
+                                    <a href="{{ url_for("web.index") }}">{{ site["name"]|upper }}</a>
+                                </div>
+                            </div>
+
+                            <h2 class="book-name">
+                                <a href="{{ url_for("web.reader", id=book.id) }}"
+                                   class="link-color-5">{{ book.name }}</a>
+                            </h2>
+
+                        </header>
+                        <div id="catalog-content" class="catalog-content booktool-data tab-content">
+                            {% include "web/_catalog.html" %}
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!-- sidebar end -->
+
+        <!-- content start -->
+        <div class="admin-content">
+            <div class="admin-content-body">
+
+                <div id="book-content" class="book-content">
+                    <div id="book-wraper" class="content-wraper">
+                        <div class="main-body">
+
+                            <header class="book-header">
+                                <div class="container">
+                                    <div id="header-loading" class="header-icon">
+                                        <span class="fa fa-spinner fa-pulse fa-2x fa-fw margin-bottom"></span>
+                                    </div>
+                                </div>
+                            </header>
+
+                            <div id="content-body" class="content-body interact-action-group">
+                                {% if catalog %}
+
+                                    <div class="title">
+                                        <h1 class="html-content-title">{{ catalog.title }}</h1>
+                                    </div>
+                                    <div id="html-content" class="html-content">
+                                        {{ catalog.publish_html|safe }}
+                                    </div>
+                                    <div class="page-button clearfix">
+                                        {% if prev %}
+                                            <a href="{{ url_for("web.reader", id=book.id, catalog_id=prev.id) }}"
+                                               class="bb-link-action" data-method="prev"><span
+                                                    class="fa fa-arrow-circle-left"></span>上一页</a>
+                                        {% endif %}
+                                        {% if next %}
+                                            <a href="{{ url_for("web.reader", id=book.id, catalog_id=next.id) }}"
+                                               class="pull-right bb-link-action" data-method="next">下一页<span
+                                                    class="fa fa-arrow-circle-right"></span></a>
+                                        {% endif %}
+
+                                    </div>
+
+                                {% endif %}
+                            </div>
+                        </div>
+                        {% include "_footer.html" %}
+                    </div>
+
+                </div>
+
+
+            </div>
+            <!-- content end -->
+
+        </div>
+    </div>
+    <script src="{{ url_for("static", filename="js/web/reader.js") }}"></script>
+
+{% endblock content %}

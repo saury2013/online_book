@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html class="no-js fixed-layout">
+<head lang="en">
+    {% block title %}{% endblock title %}
+    {%import "_pagination.html" as page_macros%}
+    {% block metas %}
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="renderer" content="webkit">
+        <meta http-equiv="Cache-Control" content="no-siteapp"/>
+        <link rel="alternate icon" type="image/png" href="{{ url_for('static',filename='favicon.png') }}">
+        <link rel="stylesheet" href="{{ url_for("static", filename="assets/css/amazeui.min.css") }}"/>
+        <link rel="stylesheet" href="{{url_for("static", filename="css/web/web.css")}}">
+        <link rel="stylesheet" href="{{url_for("static", filename="asserts/bootstrap/css/bootstrap.min.css")}}">
+        <link rel="stylesheet" href="{{url_for("static", filename="asserts/font-awesome/css/font-awesome.css")}}">
+    {% endblock metas %}
+
+    {% block styles %}
+    {% endblock styles %}
+</head>
+<body>
+{% block navbar %}
+
+{% endblock navbar %}
+
+{% block content %}
+{% endblock content %}
+
+<footer class="am-margin-top">
+  <hr>
+  <p class="am-text-center">
+    <small>© Copyright ThreeFish. by Allen.</small>
+  </p>
+</footer>
+
+<!--[if lt IE 9]>
+<script src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
+<script src="http://cdn.staticfile.org/modernizr/2.8.3/modernizr.js"></script>
+<script src="assets/js/amazeui.ie8polyfill.min.js"></script>
+<![endif]-->
+
+<!--[if (gte IE 9)|!(IE)]><!-->
+<script src="{{ url_for('static',filename='assets/js/jquery.min.js') }}"></script>
+<!--<![endif]-->
+<script src="{{ url_for('static',filename='assets/js/amazeui.min.js') }}"></script>
+<script src="{{ url_for('static',filename='assets/js/app.js') }}"></script>
+<script src="{{url_for("static", filename="asserts/jquery.min.js")}}"></script>
+<script src="{{url_for("static", filename="asserts/bootstrap/js/bootstrap.js")}}"></script>
+<script src="{{url_for("static", filename="asserts/noty.js")}}"></script>
+
+{% block scripts %}
+
+{% endblock scripts %}
+</body>
+</html>
