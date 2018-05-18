@@ -1,30 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="28fdf852-d3de-481c-b28a-1167902c4435" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/templates/admin/login.html" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/app/admin/views/auth.py" afterPath="$PROJECT_DIR$/app/admin/views/auth.py" />
-      <change beforePath="$PROJECT_DIR$/app/config_default.py" afterPath="$PROJECT_DIR$/app/config_default.py" />
-      <change beforePath="$PROJECT_DIR$/app/static/asserts/bookeditor/LICENSE" afterPath="$PROJECT_DIR$/app/static/asserts/bookeditor/LICENSE" />
-      <change beforePath="$PROJECT_DIR$/app/static/asserts/bookeditor/README.md" afterPath="$PROJECT_DIR$/app/static/asserts/bookeditor/README.md" />
-      <change beforePath="$PROJECT_DIR$/app/static/asserts/bookeditor/bookeditor.js" afterPath="$PROJECT_DIR$/app/static/asserts/bookeditor/bookeditor.js" />
-      <change beforePath="$PROJECT_DIR$/app/static/asserts/bookeditor/bookeditor.min.js" afterPath="$PROJECT_DIR$/app/static/asserts/bookeditor/bookeditor.min.js" />
-      <change beforePath="$PROJECT_DIR$/app/static/asserts/bookeditor/plugins/codemirror/addon/tern/tern.js" afterPath="$PROJECT_DIR$/app/static/asserts/bookeditor/plugins/codemirror/addon/tern/tern.js" />
-      <change beforePath="$PROJECT_DIR$/app/static/asserts/bookeditor/plugins/codemirror/keymap/vim.js" afterPath="$PROJECT_DIR$/app/static/asserts/bookeditor/plugins/codemirror/keymap/vim.js" />
-      <change beforePath="$PROJECT_DIR$/app/static/asserts/bookeditor/plugins/codemirror/mode/css/test.js" afterPath="$PROJECT_DIR$/app/static/asserts/bookeditor/plugins/codemirror/mode/css/test.js" />
-      <change beforePath="$PROJECT_DIR$/app/static/asserts/bookeditor/plugins/codemirror/mode/puppet/puppet.js" afterPath="$PROJECT_DIR$/app/static/asserts/bookeditor/plugins/codemirror/mode/puppet/puppet.js" />
-      <change beforePath="$PROJECT_DIR$/app/static/asserts/bookeditor/plugins/codemirror/mode/sas/sas.js" afterPath="$PROJECT_DIR$/app/static/asserts/bookeditor/plugins/codemirror/mode/sas/sas.js" />
-      <change beforePath="$PROJECT_DIR$/app/static/asserts/bookeditor/plugins/codemirror/test/sql-hint-test.js" afterPath="$PROJECT_DIR$/app/static/asserts/bookeditor/plugins/codemirror/test/sql-hint-test.js" />
-      <change beforePath="$PROJECT_DIR$/app/static/asserts/bookeditor/plugins/font-awesome/less/mixins.less" afterPath="$PROJECT_DIR$/app/static/asserts/bookeditor/plugins/font-awesome/less/mixins.less" />
-      <change beforePath="$PROJECT_DIR$/app/static/asserts/bookeditor/plugins/font-awesome/scss/_mixins.scss" afterPath="$PROJECT_DIR$/app/static/asserts/bookeditor/plugins/font-awesome/scss/_mixins.scss" />
-      <change beforePath="$PROJECT_DIR$/app/static/asserts/bookeditor/plugins/jquery.min.js" afterPath="$PROJECT_DIR$/app/static/asserts/bookeditor/plugins/jquery.min.js" />
-      <change beforePath="$PROJECT_DIR$/app/static/asserts/bookeditor/plugins/katex/katex.js" afterPath="$PROJECT_DIR$/app/static/asserts/bookeditor/plugins/katex/katex.js" />
-      <change beforePath="$PROJECT_DIR$/app/static/asserts/bookeditor/src/bookeditor.js" afterPath="$PROJECT_DIR$/app/static/asserts/bookeditor/src/bookeditor.js" />
-      <change beforePath="$PROJECT_DIR$/app/templates/admin/book/tf_new.html" afterPath="$PROJECT_DIR$/app/templates/admin/book/tf_new.html" />
-      <change beforePath="$PROJECT_DIR$/app/templates/admin/tf_sidebar.html" afterPath="$PROJECT_DIR$/app/templates/admin/tf_sidebar.html" />
-      <change beforePath="$PROJECT_DIR$/app/web/views/home.py" afterPath="$PROJECT_DIR$/app/web/views/home.py" />
-    </list>
+    <list default="true" id="28fdf852-d3de-481c-b28a-1167902c4435" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -38,31 +15,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="tf_login.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/templates/admin/tf_login.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="316">
-              <caret line="117" column="8" lean-forward="false" selection-start-line="117" selection-start-column="8" selection-end-line="117" selection-end-column="40" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="login.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/templates/admin/start/login.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="460">
-              <caret line="60" column="83" lean-forward="true" selection-start-line="60" selection-start-column="68" selection-end-line="60" selection-end-column="83" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="login.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/templates/admin/login.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="2016">
-              <caret line="84" column="43" lean-forward="true" selection-start-line="84" selection-start-column="43" selection-end-line="84" selection-end-column="43" />
+              <caret line="84" column="43" lean-forward="false" selection-start-line="84" selection-start-column="43" selection-end-line="84" selection-end-column="43" />
               <folding />
             </state>
           </provider>
@@ -82,7 +39,7 @@
         <entry file="file://$PROJECT_DIR$/app/admin/views/auth.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="481">
-              <caret line="24" column="50" lean-forward="true" selection-start-line="24" selection-start-column="50" selection-end-line="24" selection-end-column="50" />
+              <caret line="24" column="50" lean-forward="false" selection-start-line="24" selection-start-column="50" selection-end-line="24" selection-end-column="50" />
               <folding />
             </state>
           </provider>
@@ -122,18 +79,40 @@
         <entry file="file://$PROJECT_DIR$/app/static/css/admin/user.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="480">
-              <caret line="20" column="3" lean-forward="true" selection-start-line="20" selection-start-column="3" selection-end-line="20" selection-end-column="3" />
+              <caret line="20" column="3" lean-forward="false" selection-start-line="20" selection-start-column="3" selection-end-line="20" selection-end-column="3" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="tf_sidebar.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="tf_sidebar.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/templates/admin/tf_sidebar.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="696">
+              <caret line="29" column="0" lean-forward="true" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="codemirror.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/static/asserts/bookeditor/plugins/codemirror/lib/codemirror.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-4536">
+              <caret line="24" column="21" lean-forward="true" selection-start-line="24" selection-start-column="21" selection-end-line="24" selection-end-column="21" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="codemirror.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/static/asserts/bookeditor/plugins/codemirror/lib/codemirror.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="432">
               <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-              <folding />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -180,8 +159,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1361" />
-    <option name="y" value="471" />
+    <option name="x" value="546" />
+    <option name="y" value="446" />
     <option name="width" value="2131" />
     <option name="height" value="1590" />
   </component>
@@ -216,26 +195,6 @@
               <item name="online_book" type="b2602c69:ProjectViewProjectNode" />
               <item name="online_book" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="online_book" type="b2602c69:ProjectViewProjectNode" />
-              <item name="online_book" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-              <item name="forms" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="online_book" type="b2602c69:ProjectViewProjectNode" />
-              <item name="online_book" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="online_book" type="b2602c69:ProjectViewProjectNode" />
-              <item name="online_book" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="api" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -256,30 +215,45 @@
               <item name="online_book" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
+              <item name="asserts" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="online_book" type="b2602c69:ProjectViewProjectNode" />
               <item name="online_book" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
+              <item name="asserts" type="462c0819:PsiDirectoryNode" />
+              <item name="bookeditor" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="online_book" type="b2602c69:ProjectViewProjectNode" />
               <item name="online_book" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="asserts" type="462c0819:PsiDirectoryNode" />
+              <item name="bookeditor" type="462c0819:PsiDirectoryNode" />
+              <item name="plugins" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="online_book" type="b2602c69:ProjectViewProjectNode" />
               <item name="online_book" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
+              <item name="asserts" type="462c0819:PsiDirectoryNode" />
+              <item name="bookeditor" type="462c0819:PsiDirectoryNode" />
+              <item name="plugins" type="462c0819:PsiDirectoryNode" />
+              <item name="codemirror" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="online_book" type="b2602c69:ProjectViewProjectNode" />
+              <item name="online_book" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="asserts" type="462c0819:PsiDirectoryNode" />
+              <item name="bookeditor" type="462c0819:PsiDirectoryNode" />
+              <item name="plugins" type="462c0819:PsiDirectoryNode" />
+              <item name="codemirror" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="online_book" type="b2602c69:ProjectViewProjectNode" />
@@ -412,7 +386,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1361" y="471" width="2131" height="1590" extended-state="0" />
+    <frame x="546" y="446" width="2131" height="1590" extended-state="0" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
@@ -593,8 +567,7 @@
         <state relative-caret-position="724">
           <caret line="136" column="0" lean-forward="true" selection-start-line="136" selection-start-column="0" selection-end-line="136" selection-end-column="0" />
           <folding>
-            <element signature="n#div#1;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -610,7 +583,7 @@
     <entry file="file://$PROJECT_DIR$/app/templates/admin/start/login.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="460">
-          <caret line="60" column="83" lean-forward="true" selection-start-line="60" selection-start-column="68" selection-end-line="60" selection-end-column="83" />
+          <caret line="60" column="83" lean-forward="false" selection-start-line="60" selection-start-column="68" selection-end-line="60" selection-end-column="83" />
           <folding />
         </state>
       </provider>
@@ -626,7 +599,7 @@
     <entry file="file://$PROJECT_DIR$/app/templates/admin/login.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2016">
-          <caret line="84" column="43" lean-forward="true" selection-start-line="84" selection-start-column="43" selection-end-line="84" selection-end-column="43" />
+          <caret line="84" column="43" lean-forward="false" selection-start-line="84" selection-start-column="43" selection-end-line="84" selection-end-column="43" />
           <folding />
         </state>
       </provider>
@@ -642,7 +615,7 @@
     <entry file="file://$PROJECT_DIR$/app/admin/views/auth.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="481">
-          <caret line="24" column="50" lean-forward="true" selection-start-line="24" selection-start-column="50" selection-end-line="24" selection-end-column="50" />
+          <caret line="24" column="50" lean-forward="false" selection-start-line="24" selection-start-column="50" selection-end-line="24" selection-end-column="50" />
           <folding />
         </state>
       </provider>
@@ -674,16 +647,34 @@
     <entry file="file://$PROJECT_DIR$/app/static/css/admin/user.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="480">
-          <caret line="20" column="3" lean-forward="true" selection-start-line="20" selection-start-column="3" selection-end-line="20" selection-end-column="3" />
+          <caret line="20" column="3" lean-forward="false" selection-start-line="20" selection-start-column="3" selection-end-line="20" selection-end-column="3" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/templates/admin/tf_sidebar.html">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="696">
+          <caret line="29" column="0" lean-forward="true" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/static/asserts/bookeditor/plugins/codemirror/lib/codemirror.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-4536">
+          <caret line="24" column="21" lean-forward="true" selection-start-line="24" selection-start-column="21" selection-end-line="24" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/static/asserts/bookeditor/plugins/codemirror/lib/codemirror.js">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="432">
           <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
