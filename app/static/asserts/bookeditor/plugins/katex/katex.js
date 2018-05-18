@@ -1,7 +1,7 @@
 (function(f){if(typeof exports==="object"&&typeof module!=="undefined"){module.exports=f()}else if(typeof define==="function"&&define.amd){define([],f)}else{var g;if(typeof window!=="undefined"){g=window}else if(typeof global!=="undefined"){g=global}else if(typeof self!=="undefined"){g=self}else{g=this}g.katex = f()}})(function(){var define,module,exports;return (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
 /* eslint no-console:0 */
 /**
- * This is the web entry point for KaTeX. Here, we expose functions for
+ * This is the main entry point for KaTeX. Here, we expose functions for
  * rendering expressions either to DOM nodes or to markup strings.
  *
  * We also expose the ParseError class to check if errors thrown from KaTeX are
@@ -123,7 +123,7 @@ module.exports = matchAt;
  * parser expects us to be able to backtrack, the lexer allows lexing from any
  * given starting point.
  *
- * Its web exposed function is the `lex` function, which takes a position to
+ * Its main exposed function is the `lex` function, which takes a position to
  * lex from and a type of token to lex. It defers to the appropriate `_innerLex`
  * function.
  *
@@ -135,7 +135,7 @@ var matchAt = require("match-at");
 
 var ParseError = require("./ParseError");
 
-// The web lexer class
+// The main lexer class
 function Lexer(input) {
     this.input = input;
     this.pos = 0;
@@ -309,7 +309,7 @@ module.exports = MacroExpander;
  */
 
 /**
- * This is the web options class. It contains the style, size, color, and font
+ * This is the main options class. It contains the style, size, color, and font
  * of the current parse level. It also contains the style and size of the parent
  * parse level, so size changes can be handled efficiently.
  *
@@ -493,7 +493,7 @@ module.exports = Options;
 
 },{}],6:[function(require,module,exports){
 /**
- * This is the ParseError class, which is the web error thrown by KaTeX
+ * This is the ParseError class, which is the main error thrown by KaTeX
  * functions when something has gone wrong. This is used to distinguish internal
  * errors from errors in the expression that the user provided.
  *
@@ -576,7 +576,7 @@ var ParseError = require("./ParseError");
  *
  * The strategy of this parser is as such:
  *
- * The web functions (the `.parse...` ones) take a position in the current
+ * The main functions (the `.parse...` ones) take a position in the current
  * parse string to parse tokens from. The lexer (found in Lexer.js, stored at
  * this.lexer) also supports pulling out tokens at arbitrary places. When
  * individual tokens are needed at a position, the lexer is called to pull out a
@@ -588,9 +588,9 @@ var ParseError = require("./ParseError");
  * one or a text-y one (e.g. inside \text). Currently, this serves to
  * limit the functions which can be used in text mode.
  *
- * The web functions then return an object which contains the useful data that
+ * The main functions then return an object which contains the useful data that
  * was parsed at its given point, and a new position at the end of the parsed
- * data. The web functions can call each other and continue the parsing by
+ * data. The main functions can call each other and continue the parsing by
  * using the returned position as a new starting point.
  *
  * There are also extra `.handle...` functions, which pull out some reused
@@ -1422,7 +1422,7 @@ function get(option, defaultValue) {
 }
 
 /**
- * The web Settings object
+ * The main Settings object
  *
  * The current options stored are:
  *  - displayMode: Whether the expression should be typeset by default in
@@ -1464,7 +1464,7 @@ for (i = 0; i < 3; i++) {
 }
 
 /**
- * The web style class. Contains a unique id for the style, a size (which is
+ * The main style class. Contains a unique id for the style, a size (which is
  * the same for cramped and uncramped version of a style), a cramped flag, and a
  * size multiplier, which gives the size difference between a style and
  * textstyle.
@@ -2075,7 +2075,7 @@ module.exports = {
 },{"./domTree":15,"./fontMetrics":17,"./symbols":23,"./utils":25}],11:[function(require,module,exports){
 /* eslint no-console:0 */
 /**
- * This file does the web work of building a domTree structure from a parse
+ * This file does the main work of building a domTree structure from a parse
  * tree. The entry point is the `buildHTML` function, which takes a parse tree.
  * Then, the buildExpression, buildGroup, and various groupTypes functions are
  * called, to produce a final HTML tree.
@@ -3645,7 +3645,7 @@ module.exports = buildHTML;
 
 },{"./ParseError":6,"./Style":9,"./buildCommon":10,"./delimiter":14,"./domTree":15,"./fontMetrics":17,"./utils":25}],12:[function(require,module,exports){
 /**
- * This file converts a parse tree into a cooresponding MathML tree. The web
+ * This file converts a parse tree into a cooresponding MathML tree. The main
  * entry point is the `buildMathML` function, which takes a parse tree from the
  * parser.
  */
@@ -4274,7 +4274,7 @@ module.exports = buildTree;
  * discusses these routines on page 441-442, in the "Another subroutine sets box
  * x to a specified variable delimiter" paragraph.
  *
- * There are three web routines here. `makeSmallDelim` makes a delimiter in the
+ * There are three main routines here. `makeSmallDelim` makes a delimiter in the
  * normal font, but in either text, script, or scriptscript style.
  * `makeLargeDelim` makes a delimiter in textstyle, but in one of the Size1,
  * Size2, Size3, or Size4 fonts. `makeStackedDelim` makes a delimiter out of
@@ -8278,14 +8278,14 @@ module.exports = parseTree;
  * symbols (like 'a' or ';').
  *
  * For each of the symbols, there are three properties they can have:
- * - font (required): the font to be used for this symbol. Either "web" (the
+ * - font (required): the font to be used for this symbol. Either "main" (the
      normal font), or "ams" (the ams fonts).
  * - group (required): the ParseNode group type the symbol should have (i.e.
      "textord", "mathord", etc).
      See https://github.com/Khan/KaTeX/wiki/Examining-TeX#group-types
  * - replace: the character that this symbol or function should be
  *   replaced with (i.e. "\phi" has a replace value of "\u03d5", the phi
- *   character in the web font).
+ *   character in the main font).
  *
  * The outermost map in the table indicates what mode the symbols should be
  * accepted in (e.g. "math" or "text").

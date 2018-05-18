@@ -31,7 +31,7 @@ def reader(id, catalog_id=None):
     else:
         catalog = BookCatalog.reader(book.id)
     if not catalog:
-        return render_template("web/reader.html", book=book)
+        return render_template("web/tf_reader.html", book=book)
     prev = BookCatalog.prev(catalog)
     next = BookCatalog.next(catalog)
     catalogs = book.tree_catalogs()

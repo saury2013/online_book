@@ -16,7 +16,7 @@
 
   var displayTextTables = [{
     text: "mytable",
-    displayText: "mytable | The web table",
+    displayText: "mytable | The main table",
     columns: [{text: "id", displayText: "id | Unique ID"},
               {text: "name", displayText: "name | The name"}]
   }];

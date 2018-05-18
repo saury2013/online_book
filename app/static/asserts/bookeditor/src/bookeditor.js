@@ -1624,16 +1624,16 @@ function bookeditor(options){
 
     var html = [
         '<div id="book-toolbar" class="book-toolbar"></div>',
-        '<div id="book-web" class="book-web"></div>',
+        '<div id="book-main" class="book-main"></div>',
     ].join("\n");
     wraper.append(html);
     _this.toolbar_sel = $("#book-toolbar");
-    _this.main_sel = $("#book-web");
+    _this.main_sel = $("#book-main");
 
     var editor = _this.editor = new Editor(_this, settings);
     if(settings.catalog){
         _this.catalog = new Catalog(_this, editor, settings);
-        _this.main_sel.addClass("book-catalog-web");
+        _this.main_sel.addClass("book-catalog-main");
     }
     _this.toolbar = new ToolBar(_this, editor, settings);
 

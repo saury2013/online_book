@@ -1,7 +1,7 @@
 #coding: utf-8
 
 class Config(object):
-    DEBUG = False
+    DEBUG = True
     SECRET_KEY = 'this is secret string'
     SQLALCHEMY_DATABASE_URI = 'mysql+pymysql://root:12050625@localhost:3306/online_book?charset=utf8'
     SQLALCHEMY_COMMIT_ON_TEARDOWN = True

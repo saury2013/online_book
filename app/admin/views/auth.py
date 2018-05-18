@@ -19,7 +19,7 @@ def login():
             return redirect(url_for("admin.index"))
         flash("账号或密码错误")
     form.remember.data = True
-    return render_template("admin/tf_login.html", form=form, site=current_app.site)
+    return render_template("admin/login.html", form=form, site=current_app.site)
 
 
 @admin.route("/register", methods=["GET", "POST"])

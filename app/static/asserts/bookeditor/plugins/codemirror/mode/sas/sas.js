@@ -301,7 +301,7 @@
       token: function (stream, state) {
         // Strip the spaces, but regex will account for them either way
         if (stream.eatSpace()) return null;
-        // Go through the web process
+        // Go through the main process
         return tokenize(stream, state);
       },
 
