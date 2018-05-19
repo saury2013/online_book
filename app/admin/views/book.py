@@ -28,6 +28,7 @@ def index():
 def book_new():
     form = BookForm()
     if form.validate_on_submit():
+        print("form.brief.data",form.brief.data)
         book = Book.add(form.name.data, form.brief.data,
             form.access.data, current_user.id)
         return redirect(url_for("admin.book_edit", id=book.id))
@@ -44,7 +45,7 @@ def book_detail(id):
     if form.validate_on_submit():
         book.setting(form.name.data, form.brief.data, form.access.data)
         flash("设置成功")
-    return render_template("admin/book/detail.html", book = book, form=form)
+    return render_template("admin/book/tf_detail.html", book = book, form=form)
 
 
 @admin.route("/book/<int:id>/edit")

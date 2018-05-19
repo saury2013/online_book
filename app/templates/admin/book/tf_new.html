@@ -16,7 +16,7 @@
                 <div class="am-cf am-padding am-padding-bottom-0">
                     <div class="am-fl am-cf"><a href="{{ url_for("admin.index") }}"><strong
                             class="am-text-primary am-text-lg">书籍</strong></a> /
-                        <small>Personal information</small>
+                        <small>写新书</small>
                     </div>
                 </div>
 
@@ -86,14 +86,6 @@
        data-am-offcanvas="{target: '#admin-offcanvas'}"></a>
 {% endblock content %}
 
-{% block scripts %}
-    {% if config.get("DEBUG") %}
-        {% include "_common-js.html" %}
-        <script src="{{ url_for("static", filename="asserts/cropit/dist/jquery.cropit.js") }}"></script>
-    {% else %}
-        <script src="{{ url_for("static", filename="dist/js/common.min.js") }}"></script>
-    {% endif %}
 
-{% endblock scripts %}
 
 

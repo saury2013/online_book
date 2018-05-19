@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="no-js fixed-layout">
+<html class="fixed-layout">
 <head lang="en">
     {% block title %}{% endblock title %}
     {%import "_pagination.html" as page_macros%}
@@ -12,12 +12,13 @@
         <meta http-equiv="Cache-Control" content="no-siteapp"/>
         <link rel="alternate icon" type="image/png" href="{{ url_for('static',filename='favicon.png') }}">
         <link rel="stylesheet" href="{{ url_for("static", filename="assets/css/amazeui.min.css") }}"/>
-        <link rel="stylesheet" href="{{url_for("static", filename="css/web/web.css")}}">
+        <link rel="stylesheet" href="{{url_for("static", filename="assets/css/app.css")}}">
         <link rel="stylesheet" href="{{url_for("static", filename="asserts/bootstrap/css/bootstrap.min.css")}}">
         <link rel="stylesheet" href="{{url_for("static", filename="asserts/font-awesome/css/font-awesome.css")}}">
     {% endblock metas %}
 
     {% block styles %}
+        <script>if((typeof window.JSON)==='undefined'){ document.write('<script src="{{url_for("static", filename="dist/js/json2.js")}}"><\/script>');}</script>
     {% endblock styles %}
 </head>
 <body>

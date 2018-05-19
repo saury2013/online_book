@@ -57,7 +57,7 @@ def change_avatar(binary, old_avatar):
     """ 改变头像 """
     u = uuid.uuid1()
     name = '{0}.png'.format(u.hex)
-    im = Image.open(io.StringIO(binary))
+    im = Image.open(io.BytesIO(binary))
     generate_origin_avatar(name, im)
     generate_20px_avatar(name, im)
     generate_50px_avatar(name, im)
@@ -78,7 +78,8 @@ def change_cover(binary, cover):
     new_cover = "{}.png".format(u.hex)
     filename = "/".join([current_app.static_folder,
                          current_app.config["BOOK_COVER_PATH"], new_cover])
-    im = Image.open(io.StringIO(binary))
+    # im = Image.open(io.StringIO(binary))
+    im = Image.open(io.BytesIO(binary))
     im.save(filename)
 
     im = im.resize((90, 120), Image.ANTIALIAS)

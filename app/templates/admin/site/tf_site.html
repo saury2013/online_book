@@ -1,6 +1,6 @@
 {% extends "admin/tf_base.html" %}
 {% block title %}
-    <title>创建书籍 - {{ site["name"]|upper }}</title>
+    站点设置 - {{site["name"]|upper}}
 {% endblock title %}
 
 
@@ -8,7 +8,6 @@
 {% block content %}
     <div class="am-cf admin-main">
         {% include "admin/tf_sidebar.html" %}
-
 
         <!-- content start -->
         <div class="admin-content">
@@ -87,18 +86,7 @@
     </div>
 
 
-    <a href="#" class="am-icon-btn am-icon-th-list am-show-sm-only admin-menu"
-       data-am-offcanvas="{target: '#admin-offcanvas'}"></a>
 {% endblock content %}
 
-{% block scripts %}
-    {% if config.get("DEBUG") %}
-        {% include "_common-js.html" %}
-        <script src="{{ url_for("static", filename="asserts/cropit/dist/jquery.cropit.js") }}"></script>
-    {% else %}
-        <script src="{{ url_for("static", filename="dist/js/common.min.js") }}"></script>
-    {% endif %}
-
-{% endblock scripts %}
 
 

@@ -24,7 +24,6 @@
 
 
                 <div class="am-u-sm-12 am-u-md-8 ">
-                <button type="button" data-toggle="modal" data-target="#avatar-modal">Launch modal</button>
                     <div class="am-form am-form-horizontal">
                         <div class="am-form-group">
                             <label class="am-u-sm-3 am-form-label">头像</label>
@@ -74,7 +73,7 @@
 
                                 <label class="am-u-sm-3 am-form-label" for="password">密码</label>
                                 <div class="am-u-sm-9">
-                                    <input class="form-control password" type="password" name="password" value="">
+                                    <input id="modify_pw" class="form-control password hide" type="password" name="password" value="">
                                     <div class="btn-group">
                                         <a id="confirm" class="btn btn-primary confirm" href="javascript:;">确定</a>
                                         <a id="change" class="btn btn-default" href="javascript:;">修改密码</a>
@@ -125,13 +124,8 @@
         window.USER = {{user.id}};
     </script>
 
-    {% if config.get("DEBUG") %}
-        {% include "_common-js.html" %}
-        <script src="{{ url_for("static", filename="asserts/cropit/dist/jquery.cropit.js") }}"></script>
-        <script src="{{ url_for("static", filename="js/admin/user.js") }}"></script>
-    {% else %}
-        <script src="{{ url_for("static", filename="dist/js/user.min.js") }}"></script>
-    {% endif %}
+    <script src="{{ url_for("static", filename="asserts/cropit/dist/jquery.cropit.js") }}"></script>
+    <script src="{{ url_for("static", filename="js/admin/user.js") }}"></script>
 
 {% endblock scripts %}
 
