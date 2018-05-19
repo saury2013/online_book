@@ -119,16 +119,33 @@
                         <input type="text" class="am-form-field am-input-sm" placeholder="搜索">
                     </div>
                 </form>
-
-                <div class="am-topbar-right">
-                    <a class="am-btn am-btn-secondary am-topbar-btn am-btn-sm am-disabled" href="{{ url_for("admin.login") }}">
+                {% if current_user.is_authenticated %}
+                    <div class="am-topbar-right">
+                    <div class="am-dropdown" data-am-dropdown="{boundary: '.am-topbar'}">
+                        <button class="am-btn am-btn-secondary am-topbar-btn am-btn-sm am-dropdown-toggle"
+                                data-am-dropdown-toggle>{{ current_user.nickname }}<span
+                                class="am-icon-caret-down"></span></button>
+                        <ul class="am-dropdown-content">
+                            <li><a href="{{ url_for("admin.user_detail", id=current_user.id) }}">个人中心</a></li>
+                            <li><a href="{{ url_for("admin.logout") }}">退出</a></li>
+                        </ul>
+                    </div>
+                </div>
+                {% else %}
+                    <div class="am-topbar-right">
+                    <a class="am-btn am-btn-secondary am-topbar-btn am-btn-sm am-disabled"
+                       href="{{ url_for("admin.login") }}">
                         <span class="am-icon-pencil "></span> 注册</a>
+
                 </div>
 
                 <div class="am-topbar-right">
                     <a class="am-btn am-btn-primary am-topbar-btn am-btn-sm" href="{{ url_for("admin.login") }}">
                         <span class="am-icon-user"></span> 登录</a>
                 </div>
+                {% endif %}
+
+
             </div>
         </div>
     </header>

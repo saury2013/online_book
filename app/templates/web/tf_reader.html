@@ -14,7 +14,7 @@
     <header class="am-topbar am-topbar-inverse admin-header">
         <div class="am-topbar-brand">
             <strong>ThreeFish</strong>
-            <small>三余读书面板</small>
+            <small>三余读书</small>
         </div>
 
         <button class="am-topbar-btn am-topbar-toggle am-btn am-btn-sm am-btn-success am-show-sm-only"
@@ -24,18 +24,34 @@
         <div class="am-collapse am-topbar-collapse" id="topbar-collapse">
 
             <ul class="am-nav am-nav-pills am-topbar-nav am-topbar-right admin-header-list">
-                <li><a href="javascript:;"><span class="am-icon-envelope-o"></span> 收件箱 <span
-                        class="am-badge am-badge-warning">5</span></a></li>
-                <li class="am-dropdown" data-am-dropdown>
-                    <a class="am-dropdown-toggle" data-am-dropdown-toggle href="javascript:;">
-                        <img class="avatar" src="{{ url_for("static", filename=current_user._20px_avatar()) }}" alt="">
-                    </a>
-                    <ul class="am-dropdown-content">
-                        <li><a href="{{ url_for("admin.user_detail", id=current_user.id) }}"><span
-                                class="am-icon-user"></span> 资料</a></li>
-                        <li><a href="{{ url_for("admin.logout") }}"><span class="am-icon-power-off"></span> 退出</a></li>
-                    </ul>
-                </li>
+                {% if current_user.is_authenticated %}
+                    <li><a href="javascript:;"><span class="am-icon-envelope-o"></span> 收件箱 <span
+                            class="am-badge am-badge-warning">5</span></a></li>
+                    <li class="am-dropdown" data-am-dropdown>
+                        <a class="am-dropdown-toggle" data-am-dropdown-toggle href="javascript:;">
+                            <img class="avatar" src="{{ url_for("static", filename=current_user._20px_avatar()) }}"
+                                 alt="">
+                        </a>
+                        <ul class="am-dropdown-content">
+                            <li><a href="{{ url_for("admin.user_detail", id=current_user.id) }}"><span
+                                    class="am-icon-user"></span> 资料</a></li>
+                            <li><a href="{{ url_for("admin.logout") }}"><span class="am-icon-power-off"></span> 退出</a>
+                            </li>
+                        </ul>
+                    </li>
+                {% else %}
+                    <div class="am-topbar-right">
+                        <a class="am-btn am-btn-secondary am-topbar-btn am-btn-sm am-disabled"
+                           href="{{ url_for("admin.login") }}">
+                            <span class="am-icon-pencil "></span> 注册</a>
+
+                    </div>
+
+                    <div class="am-topbar-right">
+                        <a class="am-btn am-btn-primary am-topbar-btn am-btn-sm" href="{{ url_for("admin.login") }}">
+                            <span class="am-icon-user"></span> 登录</a>
+                    </div>
+                {% endif %}
                 {% if current_user.is_authenticated and current_user.id==book.user_id %}
                     <li class="am-hide-sm-only"><a href="{{ url_for("admin.book_edit", id=book.id) }}"><span
                             class="am-icon-wrench"></span> <span class="admin-write">编辑本书</span></a></li>
@@ -61,9 +77,9 @@
                         <header class="catalog-head">
 
 
-                            <div class="am-img-thumbnail am-radius " style="margin-left: 20%" >
-                                <a  href="{{ url_for("web.index") }}" >
-                                    <img  src="{{ url_for("static", filename="img/logo.png") }}" >
+                            <div class="am-img-thumbnail am-radius " style="margin-left: 20%">
+                                <a href="{{ url_for("web.index") }}">
+                                    <img src="{{ url_for("static", filename="img/logo.png") }}">
                                 </a>
                                 <div class="name">
                                     <a href="{{ url_for("web.index") }}">{{ site["name"]|upper }}</a>
