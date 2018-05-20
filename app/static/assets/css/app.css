@@ -29,6 +29,15 @@ list-style-type:none;
     left: -22px;
     top: 1px; }
 
+.reader-catalog {
+  display: block;
+  padding: 8px 10px 8px 20px;
+  color: #333;
+  font-size: 15px; }
+  .reader-catalog.active {
+    color: #0099FF; }
+  .reader-catalog .indent {
+    padding-left: 20px; }
 
 .book-item {
   margin-bottom: 10px; }
