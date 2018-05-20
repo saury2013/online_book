@@ -175,7 +175,7 @@
                 <ul class="book-group">
                     {% if catalogs.items %}
                         {% with type="home" %}
-                            {% include "includes/_book.html" %}
+                            {% include "includes/_tf_book.html" %}
                         {% endwith %}
                         {{ page_macros.pagination_widget(catalogs, "web.index") }}
                     {% else %}
