@@ -77,7 +77,7 @@
                         <header class="catalog-head">
 
 
-                            <div class="am-img-thumbnail am-radius " style="margin-left: 20%">
+                            <div class="am-img-thumbnail am-radius " style="margin-left: 20%;margin-top: 20px">
                                 <a href="{{ url_for("web.index") }}">
                                     <img src="{{ url_for("static", filename="img/logo.png") }}">
                                 </a>
@@ -86,7 +86,7 @@
                                 </div>
                             </div>
 
-                            <h2 class="book-name">
+                            <h2 class="book-name" style="margin-left: 20px">
                                 <a href="{{ url_for("web.reader", id=book.id) }}"
                                    class="link-color-5">{{ book.name }}</a>
                             </h2>
