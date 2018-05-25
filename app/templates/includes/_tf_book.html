@@ -35,6 +35,7 @@
                                 <li><a href="{{ url_for("admin.book_detail", id=book.id) }}">设置</a></li>
                                 <li class="divider"></li>
                                 <li><a class="careful delete-book" href="javascript:void(0);"
+
                                        data-id="{{ book.id }}">删除</a></li>
                             </ul>
                         </div>
@@ -83,13 +84,13 @@
                             </div>
                         </div>
                         <div class="book-footer ">
-                            <a href="">阅读 6251</a>
+                            <a href="">阅读 {{ [421,459,463,582,592,655,659,689,653,774,745,698,1024,1420] |random }}</a>
                             &nbsp;
-                            <a href="">收藏 1</a>
+                            <a href="">收藏 {{ [59,65,69,78,75,74,89,85,99,102,150,142,165,170] |random}}</a>
                             &nbsp;
-                            <a href="">评论 1</a>
+                            <a href="">评论 {{ [59,65,69,78,75,74,89,85,99,102,150,142,165,170] |random}}</a>
                             &nbsp;
-                            <a href="">赞 4</a>
+                            <a href="">赞 {{ [59,65,69,78,75,74,89,85,99,102,150,142,165,170] |random}}</a>
                         </div>
                     </div>
                 </div>
@@ -98,11 +99,11 @@
         <div class="meta clearfix">
 
             <div class="pull-right">
-                <a class="link-color-9" href="">阅读 183</a>
+                <a class="link-color-9" href="">阅读 {{ [115,121,123,131,134,120,135,140,150,152,158,165] |random}}</a>
                 &nbsp;
-                <a class="link-color-9" href="">评论 0</a>
+                <a class="link-color-9" href="">评论 {{ [25,65,78,88,99,100,102,103,112,114] |random}}</a>
                 &nbsp;
-                <a class="link-color-9" href="">赞 0</a>
+                <a class="link-color-9" href="">赞 {{ [25,35,39,40,42,44,48,49,50,52] |random}}</a>
             </div>
         </div>
         <hr>
